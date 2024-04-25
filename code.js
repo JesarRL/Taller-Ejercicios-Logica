@@ -278,6 +278,21 @@ botonEnviarProducto.addEventListener("click", () => {
 
 // Ejercicio 5 //
 
+boton5.addEventListener("click", () => {
+    contenedor.innerHTML = `<div class="container mt-4">
+    <h1 class="text-center mb-5">Ejercicio 5</h1>
+    <p class="fs-2 fw-semibold">·Se le debe pedir al usuario un número y mostrar la tabla de multiplicar de ese número, adicionalmente, se debe mostrar el total de las multiplicaciones solicitadas por el mismo.</p>
+<div>
+    <label class="fs-2 fw-semibold">Ingrese un numero para multiplicar:</label>
+    <input type="number" class="ms-3 ps-3 pe-2 fs-2 rounded-pill" placeholder="Ingrese un numero" id="InputEjercicio1">
+    <label class="fs-2 fw-semibold">Ingrese el numero de multiplicaciones:</label>
+    <input type="number" class="ms-3 ps-3 pe-2 fs-2 rounded-pill" placeholder="Ingrese un numero" id="InputEjercicio2">
+    
+</div>
+<button class="fs-2 rounded-pill px-4 mt-2 mb-4" id="boton-enviar">Enviar valores</button>
+
+<div class="d-flex flex-row flex-wrap" id="colocarNumero"></div>`
+
 let InputEjercicio1 = document.querySelector("#InputEjercicio1")
 
 let InputEjercicio2 = document.querySelector("#InputEjercicio2")
@@ -288,14 +303,14 @@ let botonValor = document.querySelector("#boton-enviar")
 
 
 botonValor.addEventListener("click", () => {
+    colocarNumero.innerHTML= ""
     let numeroIngresado1 = InputEjercicio1.value
     let numeroIngresado2 = InputEjercicio2.value
     for(let i=1; i<=numeroIngresado2; i++){
-        if(i==1){
-            colocarNumero.innerHTML = `${numeroIngresado1} * ${i} = ${numeroIngresado1*numeroIngresado2}`
-        }
-        else{
-            colocarNumero.innerHTML = `,${numeroIngresado1} * ${i} = ${numeroIngresado1*numeroIngresado2}`
-        }
+        colocarNumero.innerHTML += `<p class="text-white fs-3 fw-semibold ms-3 border border-white border-2 p-2">${numeroIngresado1} * ${i} = ${numeroIngresado1*i}</p>`
     }
 })
+
+})
+
+
