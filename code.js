@@ -313,4 +313,55 @@ botonValor.addEventListener("click", () => {
 
 })
 
+// Ejercicio 6 //
+
+boton6.addEventListener("click", () => {
+    contenedor.innerHTML = `<div class="container mt-4">
+    <h1 class="text-center mb-5">Ejercicio 6</h1>
+    <p class="fs-2 fw-semibold">Validar cuál es el valor de matrícula (1’000.000) que debe pagar un estudiante, teniendo en cuenta que:
+    </p>
+    <ul class="fs-3 fw-semibold">
+        <li>Si el promedio fue menor a 3 no se le descuenta nada.
+            </li>
+        <li>Cuando el promedio sea entre 3 y 4 se le descuenta el 5%
+            </li>
+        <li>Cuando el promedio sea mayor que 4, se le descuenta 50%</li>
+    </ul>
+<div>
+    <label class="fs-2 fw-semibold">Ingrese su promedio academico:</label>
+    <input type="number" min="1.0" max="5.0" class="ms-3 ps-3 pe-2 fs-2 rounded-pill" placeholder="" id="InputEjercicio1">
+    
+</div>
+<button class="fs-2 rounded-pill px-4 my-3" id="boton-enviar">Enviar nota</button>
+
+<div class="d-flex text-white fs-3 fw-semibold" id="colocarNumero">
+</div>`
+
+let InputEjercicio = document.querySelector("#InputEjercicio1")
+
+let colocarNumero = document.querySelector("#colocarNumero")
+
+let botonValor = document.querySelector("#boton-enviar")
+
+let valorMatricula = 1000000
+
+botonValor.addEventListener("click", () => {
+    let numeroIngresado1 = InputEjercicio.value
+    if(numeroIngresado1>5.0 || numeroIngresado1<1.0){
+        colocarNumero.innerHTML = `
+        Ingrese una nota de promedio valida (1.0 - 5.0)`
+    }
+    else{
+        if(numeroIngresado1<3){
+            colocarNumero.innerHTML = `El valor de su matricula es ${valorMatricula}`
+        }
+        else if(numeroIngresado1>= 3 && numeroIngresado1<=4){
+            colocarNumero.innerHTML = `El valor de su matricula es ${valorMatricula*0.95}`
+        }
+        else if(numeroIngresado1>4){
+            colocarNumero.innerHTML = `El valor de su matricula es ${valorMatricula*0.5}`
+        }
+    }
+})
+})
 
