@@ -268,7 +268,6 @@ botonEnviarProducto.addEventListener("click", () => {
         valorContador += precios[4]
         contador.innerHTML = valorContador
         
-        
     }
     else{
     }
