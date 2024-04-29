@@ -1,0 +1,50 @@
+
+body{
+    background-image: url("https://wallpapersmug.com/download/1920x1080/d4d3ea/red-abstract-pride-cross-art.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contenedor-body{   
+    height: 100vh;
+    width: 100vw;
+}
+
+.contenedor{
+    height: 500px;
+}
+
+.contenedor-1{
+    border: 2px solid rgb(129, 129, 129);
+}
+
+.contenedor-1 input{
+    background-color: #1b1b1b;
+    border: none;
+    border-right: 2px solid rgb(129, 129, 129);
+    color: #fff;
+    padding-left: 10px;
+}
+
+.contenedor-1 input:focus{
+    border: none;
+    border-right: 2px solid rgb(129, 129, 129);
+    outline: none;
+}
+
+.contenedor-1 button{
+    background-color: #ec0020;
+    border: none;
+}
+
+.contenedor-2{
+    background-color: #1b1b1b;
+    height: 455px;
+    border: 2px solid rgb(129, 129, 129);
+    border-top: none;
+}
+
+#caja{
+    overflow: auto;
+}
